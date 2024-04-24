@@ -1,7 +1,7 @@
 import streamlit as st
 from openai import OpenAI
 
-st.title("ChatGPT-like clone")
+st.title("RECETTE IMAGINE LOCAL ET DE SAISON")
 
 # Set OpenAI API key from Streamlit secrets
 client = OpenAI(api_key="")
