@@ -1,8 +1,33 @@
-# cookin
-cookin developpement
 
-1. Recevoir en entrée utilisateur le nom d’une ville.
-2. Utiliser une API externe pour r´ecup´erer des informations m´et´eorologiques pour cette ville.
-3. Sélectionner et proposer une recette de cuisine adapt´ee en fonction des donn´ees m´et´eorologiques et
-de la localisation.
-API weather gratuite : https://wttr.in/location?format=weathercondition = ”
+# Cookin
+
+Chat OpenAI proposant des recettes originales adaptées au temps, à la saison et au lieu. 
+
+
+## Authors
+
+- [@hackolite](https://www.github.com/hackolite)
+
+
+## Installation
+
+Install Cookin via pip
+
+```bash
+  git clone https://github.com/hackolite/cookin.git
+  cd cookin
+  python3.8 -m pip install -r requirements.txt
+  export OPEN_API_KEY = "key"
+  python3.8 -m streamlit run app.py
+
+```
+    
+## Deployment
+
+To deploy this project run
+
+```bash
+  docker-compose build
+  docker-compose up -d  
+```
+

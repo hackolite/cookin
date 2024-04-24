@@ -27,14 +27,14 @@ def region_msg(city: Optional[str] = None) -> Dict[str, str]:
 def main():
     st.title(TITRE)
 
-    # Set OpenAI API key from Streamlit secrets
+    # mettre OpenAI API key pour Streamlit secrets
     client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 
     # Set a default model
     if "openai_model" not in st.session_state:
         st.session_state["openai_model"] = "gpt-3.5-turbo"
 
-    # Initialize chat history
+    # Initialiser l'historique du chat
     if "messages" not in st.session_state:
         st.session_state.messages = []
 
@@ -43,11 +43,11 @@ def main():
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
 
-    # Accept user input
+    # accepter input utilisateur
     if prompt := st.chat_input("Donnez-moi un nom de ville pour votre recette"):
-        # Add user message to chat history
+        # Ajouter user message à l'historique du chat
         st.session_state.messages.append({"role": "user", "content": prompt})
-        # Display user message in chat message container
+        # seter use message dans le conteneur du chat
         with st.chat_message("user"):
             st.markdown(prompt)
 
